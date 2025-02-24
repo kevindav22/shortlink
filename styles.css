@@ -1,0 +1,120 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f1e7;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Styling */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay hitam */
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(154, 154, 154, 0.5); /* Overlay hitam transparan */
+    z-index: 0;
+}
+
+/* Kontainer */
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 120px; /* Mengecilkan logo */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin: 15px 0;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1.5rem; /* Meningkatkan ukuran font */
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Tombol */
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: block;
+    width: 80%;
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 14px; /* Membuat tombol lebih besar */
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: medium;
+    font-size: 1.1rem; /* Meningkatkan ukuran font tombol */
+    background: transparent;
+    background-color: rgba(218, 218, 218, 0.234);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.btn:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+    .tagline {
+        font-size: 1.2rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+}
